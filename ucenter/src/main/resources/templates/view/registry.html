@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <script  language="JavaScript" type="text/javascript">
+        /**
+         * 跳转到登录页面
+         */
+        function loginPage () {
+            document.location = "/uc/login";
+        }
+    </script>
+</head>
+<body>
+<form action="/registry" method="post">
+     姓名：<input type="text" name="username">
+     密码：<input type="password" name="password">
+     <button type="submit">注册</button></div>
+     <button type="button" onclick="loginPage()">回到登录页</button>
+</form>
+</body>
+</html>

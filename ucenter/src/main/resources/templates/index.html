@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style type="text/css">
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        .m {
+            width: 240px;
+            margin: 3px;
+            float: left;
+            flex: border-box;
+            background-color: darkgray;
+            border-bottom-style: initial;
+            border-bottom: lightgray;
+            border-bottom-width: inherit;
+        }
+
+        .mspan {
+            margin: 3px;
+            background-color: lavender;
+        }
+
+        .container {
+            float: left;
+            margin: 3px;
+            width: 500px;
+            background-color: ivory;
+            border-bottom-style: initial;
+            border-bottom: lightgray;
+            border-bottom-width: inherit;
+        }
+    </style>
+</head>
+<body>
+
+<div sec:authorize="isAuthenticated()">
+
+    <div class="m">
+        <div>客户管理</div>
+        <div class="mspan">
+            <li><a href="#">客户信息</a></li>
+            <li><a href="#">客户跟进</a></li>
+            <li><a href="#">客户关系</a></li>
+            <li><a href="#">项目管理</a></li>
+        </div>
+        <div>合同管理</div>
+        <div class="mspan">
+            <li><a href="#">模版管理</a></li>
+            <li><a href="#">合同登记</a></li>
+            <li><a href="#">合同审批</a></li>
+            <li><a href="#">合同归档</a></li>
+        </div>
+        <div>项目管理</div>
+        <div class="mspan">
+            <li><a href="#">项目概览</a></li>
+            <li><a href="#">项目管理</a></li>
+        </div>
+    </div>
+
+    <div class="container">
+        经过身份验证的用户.
+        用户名称： <span sec:authentication="name"></span>
+        权限：<span sec:authentication="principal.authorities"></span>
+        注销：
+
+        <form th:action="@{/logout}" method="post">
+
+            <input type="submit" value="确定注销"></form>
+    </form>
+    </div>
+</div>
+<div sec:authorize="!isAuthenticated()">
+    <a th:href="@{/uc/login}">请先登录</a>
+</div>
+
+</body>
+</html>

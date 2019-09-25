@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="18fc4e4d-2aef-42e0-b86d-50d1a090d006" name="192.168.2.156" url="http://192.168.2.156">
+        <fileTransfer host="192.168.2.156" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="62f3ecef-a13b-41e3-8e07-a650a4f38ac8" name="192.168.2.155" url="http://192.168.2.155">
+        <fileTransfer host="192.168.2.155" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="a5c5df31-7ecd-4d04-8bed-8d9b63b395a8" name="192.168.2.158" url="http://192.168.2.158">
+        <fileTransfer host="192.168.2.158" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="b5a77899-88f2-477a-81e4-08f616126aff" name="v50运行环境" url="http://192.168.11.155">
+        <fileTransfer host="192.168.11.155" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="798ef944-433e-4b09-9cf8-717d11717236" name="v50 Server Home" url="http://192.168.1.116">
+        <fileTransfer host="192.168.1.116" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

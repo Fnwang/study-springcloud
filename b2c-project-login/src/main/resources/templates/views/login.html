@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ZH-cn" xmlns:v-on="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台登录</title>
+    <link rel="stylesheet" href="/kitadmin/css/layui.css">
+    <link rel="stylesheet" href="/kitadmin/css/login.css">
+</head>
+
+<body>
+<div class="kit-login" id="vueBox">
+    <div class="kit-login-bg"></div>
+    <div class="kit-login-wapper">
+        <h2 class="kit-login-slogan">欢迎使用后台管理系统</h2>
+        <div class="kit-login-form">
+            <h4 class="kit-login-title">登录</h4>
+
+                <div class="kit-login-row">
+                    <div class="kit-login-col">
+                        <i class="layui-icon">&#xe612;</i>
+                        <span class="kit-login-input">
+                            <input type="text" v-model="userName" placeholder="用户名/邮箱/手机号"/>
+                        </span>
+                    </div>
+                    <div class="kit-login-col"></div>
+                </div>
+                <div class="kit-login-row">
+                    <div class="kit-login-col">
+                        <i class="layui-icon">&#xe64c;</i>
+                        <span class="kit-login-input">
+                            <input type="password" v-model="passWord" placeholder="密码"/>
+                        </span>
+                    </div>
+                    <div class="kit-login-col"></div>
+                </div>
+                <div class="kit-login-row">
+                    <div class="kit-login-col">
+                        <input type="checkbox" name="rememberMe" value="true" title="记住帐号" lay-skin="primary">
+                    </div>
+                </div>
+                <div class="kit-login-row">
+                    <button class="layui-btn kit-login-btn" v-on:click="submitFun">登录</button>
+                </div>
+                <div class="kit-login-row" style="margin-bottom:0;">
+                    <a href="javascript:;" style="color: rgb(153, 153, 153); text-decoration: none; font-size: 13px;"
+                       id="forgot">忘记密码</a>
+                </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="/kitadmin/polyfill.min.js"></script>
+<script src="/kitadmin/layui.js"></script>
+<script src="/vue/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+
+    new Vue({
+        el: '#vueBox',
+        data: {
+
+            userName: null,
+            passWord: null,
+            //post参数转换
+            trans: {
+                transformRequest: [function (data) {
+                    var str = '';
+                    for (var key in data) {
+                        str += encodeURIComponent(key) + '=' + encodeURIComponent(data[key]) + '&';
+                    }
+                    return str;
+                }]
+            }
+        },
+        created: function () {
+
+        },
+        methods: {
+            submitFun: function () {
+
+                var _self = this;
+                var apiURL = "/uc/doLogin";
+                var user = {
+                    userName: _self.userName,
+                    passWord: _self.passWord
+                };
+
+                //console.log("user==>", user)
+
+                //需要调用transdata转换
+                //axios的post方式，新增数据
+                axios.post(apiURL, user, _self.trans)
+                    .then(function (response) {
+
+                        var rs = response.data;
+
+                        if (rs.count > 0) {
+                            let data = rs.data[0];
+                            console.log("userName=", data.userName);
+                            console.log("passWord=", data.passWord);
+                            document.location = rs.url
+                            //console.log("url=",rs.url);
+                        } else {
+                            alert(rs.msg);
+                        }
+
+                    })
+                    .catch(function (err) {
+                        console.log("err==>", err);
+                    });
+            },
+        },
+
+    });
+
+</script>
+</body>
+
+</html>

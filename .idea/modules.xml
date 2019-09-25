@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/b2c-project-home/b2c-project-home.iml" filepath="$PROJECT_DIR$/b2c-project-home/b2c-project-home.iml" />
+      <module fileurl="file://$PROJECT_DIR$/b2c-project-login/b2c-project-login.iml" filepath="$PROJECT_DIR$/b2c-project-login/b2c-project-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/b2c-project-product/b2c-project-product.iml" filepath="$PROJECT_DIR$/b2c-project-product/b2c-project-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/b2cproject.iml" filepath="$PROJECT_DIR$/.idea/b2cproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cache-redis/cache-redis.iml" filepath="$PROJECT_DIR$/cache-redis/cache-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-common/dubbo-common.iml" filepath="$PROJECT_DIR$/dubbo-common/dubbo-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-cunsomer-reader/dubbo-cunsomer-reader.iml" filepath="$PROJECT_DIR$/dubbo-cunsomer-reader/dubbo-cunsomer-reader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-provider-book/dubbo-provider-book.iml" filepath="$PROJECT_DIR$/dubbo-provider-book/dubbo-provider-book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/es/es.iml" filepath="$PROJECT_DIR$/es/es.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq/rabbitmq.iml" filepath="$PROJECT_DIR$/rabbitmq/rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uc-jwt-security/uc-jwt-security.iml" filepath="$PROJECT_DIR$/uc-jwt-security/uc-jwt-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucenter/ucenter.iml" filepath="$PROJECT_DIR$/ucenter/ucenter.iml" />
+    </modules>
+  </component>
+</project>

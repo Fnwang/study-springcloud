@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>测试播放加密的视频</title>
+    <script language="JavaScript" type="text/javascript"
+            src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script language="JavaScript" type="text/javascript">
+        $(function () {
+            //创建XMLHttpRequest对象
+            var xhr = new XMLHttpRequest();
+            //配置请求方式、请求地址以及是否同步
+            xhr.open('POST', 'http://localhost:8787/play/1', true);
+            //设置结果类型为blob;
+            xhr.responseType = 'blob';
+            xhr.onload = function(e) {
+                //alert(this.status);
+                if (this.status === 200) {
+                    // 获取blob对象
+                    var blob = this.response;
+                    console.log(blob);
+                    // 获取blob对象地址，并把值赋给容器
+                    $("#videoPath").attr("src", URL.createObjectURL(blob));
+                }
+            };
+            xhr.send();
+        });
+
+
+    </script>
+</head>
+<body>
+<video
+       id="videoPath"
+       controls="controls"
+       preload="auto"
+       height="300"
+       width="400"
+       type="video/mp4">
+    您的浏览器不支持html5!
+</video>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>产品中心-产品分类</title>
+</head>
+<script type="text/javascript">
+
+
+</script>
+<body>
+<div>产品分类</div>
+<hr>
+<div>欢迎来产品页面购物</div>
+<div>
+    <a th:if="${session.sessionID == null}"  href="http://sso.shop.com:8081/admin/login?target=http://product.shop.com:8082/list">登录</a>
+    <span th:unless="${session.sessionID == null}">
+        欢迎<span th:text="${session.sessionID.userName}" style="color: coral"></span> !
+        <a href="http://sso.shop.com:8081/uc/signOut?target=http://product.shop.com:8082/list"> 安全退出 </a>
+        <a href="http://sso.shop.com:8081/admin/index">进入后台管理</a>
+    </span>
+</div>
+<table border="1" width="100%">
+    <tr>
+        <th>产品图片</th>
+        <th>产品名称</th>
+        <th>产品价格</th>
+        <th>其它</th>
+    </tr>
+    <tr>
+        <td>xxxxxxx</td>
+        <td>January</td>
+        <td>$100</td>
+        <td>January</td>
+    </tr>
+    <tr>
+        <td>xxxxxxx</td>
+        <td>January</td>
+        <td>$100</td>
+        <td>January</td>
+    </tr>
+    <tr>
+        <td>xxxxxxx</td>
+        <td>January</td>
+        <td>$100</td>
+        <td>January</td>
+    </tr>
+    <tr>
+        <td>xxxxxxx</td>
+        <td>January</td>
+        <td>$100</td>
+        <td>January</td>
+    </tr>
+    <tr>
+        <td>xxxxxxx</td>
+        <td>January</td>
+        <td>$100</td>
+        <td>January</td>
+    </tr>
+</table>
+</body>
+</html>

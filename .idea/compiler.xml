@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="b2c-project-home" />
+        <module name="b2c-project-login" />
+        <module name="b2c-project-product" />
+        <module name="cache-redis" />
+        <module name="dubbo-common" />
+        <module name="dubbo-cunsomer-reader" />
+        <module name="dubbo-provider-book" />
+        <module name="es" />
+        <module name="rabbitmq" />
+        <module name="uc-jwt-security" />
+        <module name="ucenter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="b2c-project-admin" target="1.8" />
+      <module name="b2c-project-home" target="1.8" />
+      <module name="b2c-project-login" target="1.8" />
+      <module name="b2c-project-product" target="1.8" />
+      <module name="b2cproject" target="1.8" />
+      <module name="cache-redis" target="1.8" />
+      <module name="dubbo-common" target="1.8" />
+      <module name="dubbo-cunsomer-reader" target="1.8" />
+      <module name="dubbo-customer-consumer" target="1.8" />
+      <module name="dubbo-provider-book" target="1.8" />
+      <module name="dubbo-sale-provider" target="1.8" />
+      <module name="es" target="1.8" />
+      <module name="rabbitmq" target="1.8" />
+      <module name="uc-jwt-security" target="1.8" />
+      <module name="ucenter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="b2c-project-admin" options="-parameters" />
+      <module name="b2c-project-home" options="-parameters" />
+      <module name="b2c-project-login" options="-parameters" />
+      <module name="b2c-project-product" options="-parameters" />
+      <module name="b2cproject" options="-parameters" />
+      <module name="cache-redis" options="-parameters" />
+      <module name="dubbo-common" options="-parameters" />
+      <module name="dubbo-cunsomer-reader" options="-parameters" />
+      <module name="dubbo-customer-consumer" options="-parameters" />
+      <module name="dubbo-provider-book" options="-parameters" />
+      <module name="dubbo-sale-provider" options="-parameters" />
+      <module name="es" options="-parameters" />
+      <module name="rabbitmq" options="-parameters" />
+      <module name="uc-jwt-security" options="-parameters" />
+      <module name="ucenter" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<script type="text/javascript">
+    /**
+     * 登录信息验证
+     * @returns {boolean}
+     */
+    function doLogin() {
+        return true;
+    }
+
+</script>
+<body>
+<div>首页</div>
+<hr>
+<div>欢迎来到首页！</div>
+<a href="http://sso.shop.com:8081/admin/login?target=http://home.shop.com:8083">登录</a>
+<div th:text="${cookie}"></div>
+</body>
+</html>

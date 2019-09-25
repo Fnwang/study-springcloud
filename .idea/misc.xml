@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="FLOW" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/b2c-project-home/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/cache-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/ucenter/pom.xml" />
+        <option value="$PROJECT_DIR$/uc-jwt-security/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-sale/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-customer/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-provider-book/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-cunsomer-reader/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="10" project-jdk-type="JavaSDK" />
+</project>
